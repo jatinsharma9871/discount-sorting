@@ -10,10 +10,10 @@ const endpoint = `https://${STORE_DOMAIN}/api/${API_VERSION}/graphql.json`;
 async function gqlFetch(query, variables = {}) {
   const res = await fetch(endpoint, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-Shopify-Storefront-Access-Token": TOKEN,
-    },
+   headers: {
+  "X-Shopify-Storefront-Access-Token": process.env.SHOPIFY_STOREFRONT_TOKEN,
+  "Content-Type": "application/json"
+},
     body: JSON.stringify({ query, variables }),
   });
   if (!res.ok) {
