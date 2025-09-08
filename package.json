@@ -1,0 +1,7 @@
+{
+  "name": "Discount-sorting-vercel",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node api/search.js"
+  }
+}
